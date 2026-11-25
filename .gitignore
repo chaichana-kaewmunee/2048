@@ -1,12 +1,22 @@
 # Secrets: local agent settings contain API keys
-.claude/settings.local.json
 .env
 .env.*
 !.env.example
 *.pem
 *.key
 
+# Dependencies and build output
+node_modules/
+dist/
+.playwright/
+coverage/
+
 # OS generated files
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Test artifacts
+test-results/
+playwright-report/
+artifacts/

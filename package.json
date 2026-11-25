@@ -1,0 +1,33 @@
+{
+  "name": "neon-fusion-2048",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.3",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/web dev",
+    "dev:api": "bun run --cwd apps/api dev",
+    "build": "bun run --cwd apps/web build",
+    "typecheck": "tsc -p packages/core/tsconfig.json && tsc -p packages/storage/tsconfig.json && tsc -p apps/web/tsconfig.json && tsc -p apps/api/tsconfig.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "bun run typecheck && bun run test && bun run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@testing-library/jest-dom": "8.0.0",
+    "@testing-library/react": "16.3.3",
+    "@types/bun": "1.4.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "jsdom": "31.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.1"
+  }
+}
