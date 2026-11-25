@@ -5,6 +5,17 @@ A local-first, bilingual 2048 game built with a pure TypeScript engine, React, P
 ## Features
 
 - Classic 4×4 gameplay with deterministic, injectable RNG
+- Arrow‑key, WASD, and touch‑swipe input
+- Unlimited undo within the current game
+- One‑time 2048 victory dialog with continued play
+- English and Thai interfaces with persisted language selection (stored in `localStorage`)
+- Six local statistics stored with SQLite WASM and kvvfs
+- Safe session‑memory fallback when browser storage is unavailable or full
+- Cross‑tab refresh using Web Locks, storage events, and BroadcastChannel
+- Responsive neon interface with visible focus and reduced‑motion support
+- Versioned Elysia health API; no player data is sent to the backend
+
+- Classic 4×4 gameplay with deterministic, injectable RNG
 - Arrow-key, WASD, and touch-swipe input
 - Unlimited undo within the current game
 - One-time 2048 victory dialog with continued play

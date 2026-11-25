@@ -1543,3 +1543,50 @@ strong {
     transition-duration: 0.01ms !important;
   }
 }
+/* Enhanced UI Theme */
+:root {
+  --primary: #6aa8ff;
+  --primary-hover: #5a90e6;
+  --secondary: #66e7f2;
+  --background: #070a13;
+  --card-bg: rgba(15,22,39,0.85);
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  --border-radius: 12px;
+  --transition: 0.2s ease;
+}
+
+/* Buttons */
+button {
+  border-radius: var(--border-radius);
+  background: var(--primary);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: background var(--transition), transform var(--transition);
+}
+button:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Cards / Panels */
+.panel {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+}
+
+/* Adjust main navigation */
+.main-nav {
+  gap: 8px;
+  padding: 0.5rem 1rem;
+}
+
+/* Ambient circles brighter */
+.ambient {
+  opacity: 0.2;
+}

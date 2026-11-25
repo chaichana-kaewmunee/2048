@@ -1,10 +1,15 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
+  reporter: [
+    ['list'],
+    ['json', { outputFile: 'test-results/result.json' }],
+    ['html', { outputFolder: 'playwright-report' }],
+  ],
   testDir: './e2e',
   fullyParallel: false,
   workers: 1,
-  reporter: 'list',
+
   use: {
     baseURL: 'http://127.0.0.1:5173',
     headless: true,
