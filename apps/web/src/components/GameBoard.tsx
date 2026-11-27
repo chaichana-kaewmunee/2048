@@ -243,6 +243,9 @@ export function GameBoard({ board, lastMove, language, disabled, onMove }: GameB
         mouse: true,
         touch: true,
       },
+      audio: {
+        noAudio: true,
+      },
       banner: false,
     });
 
